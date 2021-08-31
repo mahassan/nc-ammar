@@ -20,8 +20,8 @@ function App() {
               <Home />
             </Route>
           </Switch>
+          <Header />
         </Router>
-        <Header />
       </header>
     </div>
   );
