@@ -1,9 +1,9 @@
 import { React, useState, useEffect } from "react";
-import Apis from "../utils/apis";
+import { articlesApi } from "../utils/apis";
 const Articles = () => {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
-    Apis().then(({ topics }) => {
+    articlesApi().then(({ topics }) => {
       setArticles(topics);
     });
   }, []);
