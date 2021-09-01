@@ -19,3 +19,10 @@ export const GetTopicByID = (article_id) => {
     return res.json();
   });
 };
+export const GetCommentsByID = (article_id) => {
+  return fetch(
+    `https://ammar-evening-news.herokuapp.com/api/articles/${article_id}/comments`
+  ).then((res) => {
+    return res.json();
+  });
+};
