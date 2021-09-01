@@ -1,5 +1,5 @@
 export const articlesApi = () => {
-  return fetch("https://ammar-evening-news.herokuapp.com/api/topics").then(
+  return fetch("https://ammar-evening-news.herokuapp.com/api/articles").then(
     (res) => {
       return res.json();
     }

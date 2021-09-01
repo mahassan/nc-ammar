@@ -3,15 +3,15 @@ import { articlesApi } from "../utils/apis";
 const Articles = () => {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
-    articlesApi().then(({ topics }) => {
-      setArticles(topics);
+    articlesApi().then(({ articles }) => {
+      setArticles(articles);
     });
   }, []);
   return (
     <div>
       <ul>
         {articles.map((article) => {
-          return <li key={article.description}>{article.description}</li>;
+          return <li key={article.title}>{article.title}</li>;
         })}
       </ul>
     </div>
