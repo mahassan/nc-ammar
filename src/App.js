@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Articles from "./components/Articles";
+import SingleArticle from "./components/SingleArticle";
 import Topics from "./components/Topics";
 import Home from "./components/Home";
 import "./css/App.css";
@@ -16,6 +17,9 @@ function App() {
             </Route>
             <Route path="/topics">
               <Topics />
+            </Route>
+            <Route path="/article/:article_id">
+              <SingleArticle />
             </Route>
             <Route path="/">
               <Home />
