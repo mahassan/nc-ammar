@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Articles from "./components/Articles";
 import Topics from "./components/Topics";
 import Home from "./components/Home";
+import "./css/App.css";
 function App() {
   return (
     <div className="App">
