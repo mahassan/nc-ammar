@@ -13,8 +13,9 @@ const Articles = () => {
       <ul>
         {articles.map((article) => {
           return (
-            <Link to={`article/${article.article_id}`}>
-              <li key={article.title}>{article.title}</li>
+            // Link to needs to match the Router link in the App.js
+            <Link key={article.title} to={`article/${article.article_id}`}>
+              <li>{article.title}</li>
             </Link>
           );
         })}
