@@ -12,3 +12,10 @@ export const topicsAPI = () => {
     }
   );
 };
+export const GetTopicByID = (article_id) => {
+  return fetch(
+    `https://ammar-evening-news.herokuapp.com/api/articles/${article_id}`
+  ).then((res) => {
+    return res.json();
+  });
+};
