@@ -11,6 +11,7 @@ function App() {
       <header className="App-header">
         <h1>AEN</h1>
         <Router>
+          <Header />
           <Switch>
             <Route path="/articles">
               <Articles />
@@ -25,7 +26,6 @@ function App() {
               <Home />
             </Route>
           </Switch>
-          <Header />
         </Router>
       </header>
     </div>
