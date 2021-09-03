@@ -7,7 +7,7 @@ input[type="text"],
 input[type="button"] {
   height: 2rem;
 }
-label,
-input[type="button"] {
+label {
   margin: 0.7rem 0;
+  cursor: pointer;
 }
