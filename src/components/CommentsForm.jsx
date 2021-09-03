@@ -1,13 +1,16 @@
 import { useState } from "react";
 import "../css/CommentsForm.css";
 import { PostCommentByArticle } from "../utils/apis";
-const CommentsForm = ({ article_id }) => {
+const CommentsForm = ({ article_id, setComments }) => {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
   const addComment = (event) => {
     event.preventDefault();
-    console.log(article_id);
-    PostCommentByArticle(article_id, { name, message });
+    PostCommentByArticle(article_id, { name, message }).then((newComment) => {
+      setComments((currComments) => {
+        return [...currComments, newComment];
+      });
+    });
   };
   return (
     <div>

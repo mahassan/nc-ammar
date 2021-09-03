@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { GetCommentsByID } from "../utils/apis";
-
+import CommentsForm from "./CommentsForm";
 const Comments = ({ article_id }) => {
   const [comments, setComments] = useState([]);
   useEffect(() => {
@@ -10,6 +10,7 @@ const Comments = ({ article_id }) => {
   }, []);
   return (
     <div>
+      <CommentsForm article_id={article_id} setComments={setComments} />
       <h4>Comments</h4>
       <ul>
         {comments.map((comment) => {
