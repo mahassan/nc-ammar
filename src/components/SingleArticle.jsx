@@ -24,7 +24,7 @@ const SingleArticle = () => {
         <p>{article.body}</p>
       </article>
       <footer>
-        <CommentsForm />
+        <CommentsForm article_id={article_id} />
         <Comments article_id={article_id} />
       </footer>
     </div>
