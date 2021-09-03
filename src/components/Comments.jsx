@@ -11,14 +11,16 @@ const Comments = ({ article_id }) => {
   return (
     <div>
       <h4>Comments</h4>
-      {comments.map((comment) => {
-        return (
-          <div>
-            <p>Comment By: {comment.author}</p>
-            <p>Comment {comment.body.slice(1, 50) + "...."}</p>
-          </div>
-        );
-      })}
+      <ul>
+        {comments.map((comment) => {
+          return (
+            <li key={comment.comment_id}>
+              <p>Comment By: {comment.author}</p>
+              <p>Comment {comment.body.slice(1, 50) + "...."}</p>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
