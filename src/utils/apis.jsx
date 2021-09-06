@@ -34,6 +34,10 @@ export const PostCommentByArticle = (article_id, { name, message }) => {
 };
 // voting
 export const PatchArticleById = (article_id, vote_count) => {
-  //return axios.patch(`${baseURL}/articles/${article_id}`, {});
-  console.log(article_id, vote_count);
+  console.log(article_id, vote_count, "<<<<");
+  return axios
+    .patch(`${baseURL}/articles/${article_id}`, {
+      inc_votes: vote_count,
+    })
+    .then((res) => console.log(res.data));
 };

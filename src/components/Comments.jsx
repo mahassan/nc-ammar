@@ -17,7 +17,7 @@ const Comments = ({ article_id }) => {
           return (
             <li key={comment.comment_id}>
               <p>Comment By: {comment.author}</p>
-              <p>Comment {comment.body.slice(1, 50) + "...."}</p>
+              <p>Comment {comment.body.slice(0, 50) + "...."}</p>
             </li>
           );
         })}
